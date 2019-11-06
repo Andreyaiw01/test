@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список пользователей</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Список пользователей</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each users}}
+          <tr>
+            <th>{{this.id}}</th>
+            <td>{{this.username}}</td>
+            <td>{{this.email}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+    </table>   
+</body>
+<html>

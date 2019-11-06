@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>method delay</title>
+</head>
+<body>
+    <script>
+
+        Function.prototype.delay = function (time) {
+            setTimeout(this, time)
+        };
+
+        var foo = function () {
+            alert("bingo!");
+        };
+
+        foo.delay(300); // после 0.3s: "bingo!"
+        bar.delay(600); // после 0.6s: "Wow!"
+
+        function bar() {
+            alert("Wow!");
+        }
+
+    </script>   
+</body>
+</html>
